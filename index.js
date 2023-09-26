@@ -103,7 +103,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contact',
+        name: 'email',
         message: 'What is your email address? (Required)',
         validate: emailInput => {
             if (emailInput) {
@@ -116,7 +116,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'contact',
+        name: 'github',
         message: 'What is your github username? (Required)',
         validate: gitInput => {
             if (gitInput) {
