@@ -42,11 +42,9 @@ function generateMarkdown(data) {
 
 
   ## Contact
-GitHub: <a href="github.com:${data.username}">${data.github}</a>'
+GitHub: <a href="github.com:${data.username}">${data.github}</a>
 
 Email: <a href="mailto:${data.email}">${data.email}</a>`
-
-
 
  }
  
