@@ -44,7 +44,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Usage',
+        name: 'usage',
         message: 'How will your project be used? (Required)',
         validate: usageInput => {
             if (usageInput) {

@@ -39,9 +39,15 @@ function generateMarkdown(data) {
 
   ## Testing
    ${data.testing}
- 
+
+
   ## Contact
-${data.email}">${data.github}</a>`
+${data.github}
+
+//   ## Contact
+// <a href="mailto:${data.email}">${data.email}</a>`
+
+
   
  }
  
