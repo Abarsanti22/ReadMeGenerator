@@ -42,13 +42,12 @@ function generateMarkdown(data) {
 
 
   ## Contact
-${data.github}
+GitHub: <a href="github.com:${data.username}">${data.github}</a>'
 
-//   ## Contact
-// <a href="mailto:${data.email}">${data.email}</a>`
+Email: <a href="mailto:${data.email}">${data.email}</a>`
 
 
-  
+
  }
  
  module.exports = generateMarkdown;
