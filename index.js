@@ -1,9 +1,7 @@
-// TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-// TODO: Create an array of questions for user input
 const questions = [ 
     {
         type: 'input',
@@ -34,12 +32,12 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'What is the installation process?  (Required)',
+        message: 'What is the installation process for your project?  (Required)',
         validate: installInput => {
             if (installInput) {
                 return true;
             } else {
-                console.log('Please provide the installation process for your repository.');
+                console.log('Please provide the installation process for your project.');
                 return false;
             }
         }
@@ -47,18 +45,16 @@ const questions = [
     {
         type: 'input',
         name: 'Usage',
-        message: 'What are the operating instructions for your project? (Required)',
+        message: 'How will your project be used? (Required)',
         validate: usageInput => {
             if (usageInput) {
                 return true;
             } else {
-                console.log('Please provide instructions for using your project.');
+                console.log('Please provide information on how your project will be used.');
                 return false;
             }
         }
     },
-
-
     {
         type: 'input',
         name: 'contributors',
@@ -105,13 +101,12 @@ const questions = [
     choices: ["AAL", "ISC", "MIT", "NTP", "W3C"]
     
     },
-    
     {
         type: 'input',
         name: 'contact',
         message: 'What is your email address? (Required)',
-        validate: contactInput => {
-            if (contactInput) {
+        validate: emailInput => {
+            if (emailInput) {
                 return true;
             } else {
                 console.log('Please provide your email address.');
@@ -123,8 +118,8 @@ const questions = [
         type: 'input',
         name: 'contact',
         message: 'What is your github username? (Required)',
-        validate: contactInput => {
-            if (contactInput) {
+        validate: gitInput => {
+            if (gitInput) {
                 return true;
             } else {
                 console.log('Please provide your github username.');
@@ -134,11 +129,8 @@ const questions = [
     },
 ];
 
-
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
 function init() {
-    inquirer.prompt(questions).then(function(userInput) {
+inquirer.prompt(questions).then(function(userInput) {
 const markdownString = generateMarkdown(userInput)
 
 fs.writeFile('README.md', markdownString, function(err) {
@@ -152,20 +144,4 @@ fs.writeFile('README.md', markdownString, function(err) {
     },
     )}
 
-
-// TODO: Create a function to initialize app
-// function init() {
-
-//     inquirer.prompt(questions).then(function(userInput) {
-        
-//         const markdownString = generateMarkdown(userInput)
-// }
-// )}
-
-// function init() {
-//     return inquirer.prompt(questions);
-// };
-
-// }
-// Function call to initialize app
 init();
