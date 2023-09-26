@@ -1,69 +1,46 @@
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
-
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
-
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
-
-// // TODO: Create a function to generate markdown for README
-// function generateMarkdown(data) {
-//   return `# ${data.title}
-
-// `;
-// }
-
 module.exports = generateMarkdown;
 function generateMarkdown(data) {
 
-  //   return `# ${data.title}
    return `# ${data.title}
  
-   ![badge](https://img.shields.io/github/languages/top/${data.github}/${data.repo})
-   <br> 
-   ![badge](https://img.shields.io/github/languages/count/${data.github}/${data.repo})
-   <br>
-   ![badge](https://img.shields.io/github/issues/${data.github}/${data.repo})
-   <br>
-   ![badge](https://img.shields.io/github/issues-closed/${data.github}/${data.repo})
-   <br>
-   ![badge](https://img.shields.io/github/last-commit/${data.github}/${data.repo})
-   <br>
-   ![badge](https://img.shields.io/badge/license-${data.license}-important)
+
+   ## Table of Contents
+
+   * [License](#license)
+   * [Description](#description)
+   * [Installation](#installation)
+   * [Usage](#usage)
+   * [Contributors](#contributors)
+   * [Tests](#testing)
+   * [Questions?](#contact)
    
-   ## Description
-   
-    ${data.description}
+
+  ## Description
+  ${data.description}
   
-   ## Documentation
-   ${data.documentation}
+  ## Installation
+   ${data.installation}
   
-   ## Usage
+  ## Usage
    ${data.usage}
  
-   ## Screenshot
-   ![Screenshot](${data.screenshot})
+  ## Screenshot
+  ![Screenshot](${data.screenshot})
  
-   ## Features
-   ${data.features}
    
-   # Acknowledgements
-   ${data.acknowledgements}
+  ## Contributors
+   ${data.contributors}
      
-   ## License
+  ## License
    ![badge](https://img.shields.io/badge/license-${data.license}-important)
    <br>
    Permission to use this application is granted under the ${data.license} license. <https://opensource.org/licenses/${data.license}>
  
- 
-   ## Testing
+
+  ## Testing
    ${data.testing}
  
-   ## Contact:
+  ## Contact
  <a href="mailto:${data.email}">${data.email}</a>`
   
  }

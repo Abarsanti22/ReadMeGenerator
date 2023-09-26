@@ -20,34 +20,6 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'repo',
-        message: 'What is the title of your repository?  (Required)',
-        validate: repoInput => {
-            if (repoInput) {
-                return true;
-            } else {
-                console.log('Please provide the title of your repository.');
-                return false;
-            }
-        }
-    },
-    {
-        type: 'input',
-        name: 'github',
-        message: 'What is your Github username?  (Required)',
-        validate: githubInput => {
-            if (githubInput) {
-                return true;
-            } else {
-                console.log('Please provide your Github username.');
-                return false;
-            }
-        }
-    },
-
-
-    {
-        type: 'input',
         name: 'description',
         message: 'What is the description of your project? (Required)',
         validate: descInput => {
@@ -61,13 +33,54 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'documentation',
+        name: 'installation',
+        message: 'What is the installation process?  (Required)',
+        validate: installInput => {
+            if (installInput) {
+                return true;
+            } else {
+                console.log('Please provide the installation process for your repository.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'Usage',
         message: 'What are the operating instructions for your project? (Required)',
-        validate: docInput => {
-            if (docInput) {
+        validate: usageInput => {
+            if (usageInput) {
                 return true;
             } else {
                 console.log('Please provide instructions for using your project.');
+                return false;
+            }
+        }
+    },
+
+
+    {
+        type: 'input',
+        name: 'contributors',
+        message: 'Who contributed to this project? (Required)',
+        validate: contInput => {
+            if (contInput) {
+                return true;
+            } else {
+                console.log('Please provide contributors.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'testing',
+        message: 'What is the process used to test this application? (Required)',
+        validate: testInput => {
+            if (testInput) {
+                return true;
+            } else {
+                console.log('Please provide instructions for testing your project.');
                 return false;
             }
         }
@@ -92,15 +105,29 @@ const questions = [
     choices: ["AAL", "ISC", "MIT", "NTP", "W3C"]
     
     },
+    
     {
         type: 'input',
         name: 'contact',
-        message: 'What is your contact information? (Required)',
+        message: 'What is your email address? (Required)',
         validate: contactInput => {
             if (contactInput) {
                 return true;
             } else {
-                console.log('Please provide your contact information.');
+                console.log('Please provide your email address.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'contact',
+        message: 'What is your github username? (Required)',
+        validate: contactInput => {
+            if (contactInput) {
+                return true;
+            } else {
+                console.log('Please provide your github username.');
                 return false;
             }
         }
