@@ -1,5 +1,6 @@
 # Read Me Generator
  
+   ![badge](https://img.shields.io/badge/license-MIT-important)
 
    ## Table of Contents
 
@@ -9,7 +10,7 @@
    * [Usage](#usage)
    * [Contributors](#contributors)
    * [Tests](#testing)
-   * [Questions?](#contact)
+   * [Questions?](#questions)
    
 
   ## Description
@@ -19,10 +20,10 @@
    To use this application please install npm inquirer.
   
   ## Usage
-   After installing the npm inquirer, navigate to the command line and enter node index.js.  Answer the required prompts  and a README file will be generated.
+   After installing the npm inquirer, navigate to the command line and enter node index.js. Answer the required prompts and a README file will be generated.
  
   ## Screenshot
-  ![Screenshot](screenshot)
+  ![Screenshot](screenshot.png)
  
    
   ## Contributors
@@ -38,7 +39,7 @@
    Run npm run test from the command line to test .
 
 
-  ## Contact
+  ## Questions
 GitHub: <a href="github.com:undefined">Abarsanti22</a>
 
-Email: <a href="mailto:Abarsanti7@gmail.com">Abarsanti7@gmail.com</a>
+Please email me with any additional questions at <a href="mailto:Abarsanti7@gmail.com">Abarsanti7@gmail.com</a>

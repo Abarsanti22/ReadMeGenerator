@@ -3,6 +3,7 @@ function generateMarkdown(data) {
 
    return `# ${data.title}
  
+   ![badge](https://img.shields.io/badge/license-${data.license}-important)
 
    ## Table of Contents
 
@@ -12,7 +13,7 @@ function generateMarkdown(data) {
    * [Usage](#usage)
    * [Contributors](#contributors)
    * [Tests](#testing)
-   * [Questions?](#contact)
+   * [Questions?](#questions)
    
 
   ## Description
@@ -41,10 +42,10 @@ function generateMarkdown(data) {
    ${data.testing}
 
 
-  ## Contact
+  ## Questions
 GitHub: <a href="github.com:${data.username}">${data.github}</a>
 
-Email: <a href="mailto:${data.email}">${data.email}</a>`
+Please email me with any additional questions at <a href="mailto:${data.email}">${data.email}</a>`
 
  }
  
